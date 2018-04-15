@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game-In</title>
+	<meta charset="utf-8">
+	
+	<!-- ESTO ES PROPIO DE BOOSTRAP, ES NECESARIO PAR QUE FUNCIONE EL RESTO DE COSAS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  
+  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<!-- HASTA AQUI -->
+
+  	<!-- CSS PROPIO -->
+  		<link rel="stylesheet" type="text/css" href="css/css_inicial.css">
+  	<!-- -->
+
+</head>
+<body>	
+
+	<!-- ESTE HEADER LO UNICO QUE LE FALTA ES QUE AL EMPEQUEÑECERSE SE ESCONDAN LOS BOTONES -->
+	<header>
+		<!-- SI PONERMOS CONTAINER NO SE EXPANDE ENTERA Y SI LO PONEMOS FLUID PARECE QUE SI PERO NO LLEGA A OCUPAR TODA LA PANTALLA -->
+		<!-- <div class="container-fluid"> -->
+			<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Game-In</a>
+				<!-- ESTO NO SE PARA QUE VALE -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    		<span class="navbar-toggler-icon"></span>
+			  		</button>
+			  	<!-- HASTA AQUI -->
+
+			  	<!-- ESTE DIV LO QUE HACE ES SEPARAR ENTRE EL ICONO PRINCIPAL Y LOS BOTONES -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+
+				<!-- ESTOS SON LOS BOTONES DE REGISTRO Y LOGUEO-->
+				<form class="form-inline">
+					<a href="#"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-In</button></a>
+					<a href="#"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-Up</button></a>
+				</form>
+				<!-- HASTA AQUI -->
+			</nav>
+		<!-- </div> -->
+	</header>
+
+	<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
+	<div class="container-fluid">
+		<!-- Y DENTRO CREAMOS OTRO PARA QUE NO OCUPE TODO EL ANCHO Y NOS DEJE UNOS MARGENES -->
+		
+		<!-- CONTENEDOR EN EL QUE LE DECIMOS QUE VA A OCUPAR LAS DOCE COLUMNAS DE LA PAGINA -->
+		<div class="col-12">
+			<div class="info_web">
+				Esta página va a ser una Web dedicada a contactar con personas con gustes afines a los nuestros.<br/>
+				podremos filtrar por juegos, rangos etc.. Para no estar solos nunca jugando
+			</div>
+		
+		<br/>
+
+			<div class="contenedor_info1">
+				<div class="info_foto">
+					IMAGEN DE ALGUNA PARTE DE LA PAGINA
+				</div>
+			
+				<div class="info_texto">
+					TEXTO EXPLICACION
+				</div>
+			</div>
+
+			<div class="contenedor_info1">
+				<div class="info_foto">
+					IMAGEN DE ALGUNA PARTE DE LA PAGINA
+				</div>
+			
+				<div class="info_texto">
+					TEXTO EXPLICACION
+				</div>
+			</div>
+
+			<div class="contenedor_info1">
+				<div class="info_foto">
+					IMAGEN DE ALGUNA PARTE DE LA PAGINA
+				</div>
+			
+				<div class="info_texto">
+					TEXTO EXPLICACION
+				</div>
+			</div>
+
+			<div class="contenedor_info1">
+				<div class="info_foto">
+					IMAGEN DE ALGUNA PARTE DE LA PAGINA
+				</div>
+			
+				<div class="info_texto">
+					TEXTO EXPLICACION
+				</div>
+			</div>
+				
+			<!-- AQUÍ FALTA EL FOOTER, ESTÁ EN OTRO ARCHIVO, PORQUE HAY QUE TRATARLO -->
+			<footer>
+				inffo y cosas
+			</footer>
+		</div>	
+	</div>
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+/*AQUI LA PARTE DEL BODY*/
+body {
+	background-image: url("../img/fondo_negro.jpg");
+}
+
+.info_web {
+	margin-left: 10%;
+	width: 80%;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	margin-top: 15px;
+	padding: 10px;
+	color: white;
+}
+
+.contenedor_info1 {
+	margin-left: 10%;
+	width: 80%;
+	overflow: auto; /*ESTO SIRVE PARA QUE NO SE DESCUADRE TODO*/
+}
+
+.info_foto {
+	float: left;
+	margin-left: 5%;
+	margin-top: 15px;
+	width: 40%;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+
+.info_texto {
+	float: right;
+	margin-right: 5%;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	width: 40%;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+
+/*ESTILOS DEL FOOTER */
+
+.footer1{
+	border-style: solid;
+	border-color: rgb(40, 167, 69);
+	border-radius: 10px;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	width: 100%;
+	height: 25%;
+	
+	position: absolute;
+  	bottom: 0;
+}
+
+.copy{
+	color: rgb(40, 167, 69);
+	text-align: center;
+}
+
+.footer{
+	padding-bottom: 20px;
+	color: black;
+}
+
+.flotante{
+	float: right;
+}
+
+.enlaces_footer{
+	color:#0000FF;
+}
+
+/* CSS DEL FOOTER */
+footer { 
+	background-color: rgb(40, 167, 69);
+	border-color: rgb(40, 167, 69);
+  	height: 50px; 
+  	background:black; 
+  	width:100%; 
+  	position:absolute; 
+  	bottom:1px; 
+  	left:0; 
+}
