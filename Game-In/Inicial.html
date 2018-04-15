@@ -7,7 +7,9 @@
 	<!-- ESTO ES PROPIO DE BOOSTRAP, ES NECESARIO PAR QUE FUNCIONE EL RESTO DE COSAS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   
-  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 	<!-- HASTA AQUI -->
 
   	<!-- CSS PROPIO -->
@@ -15,32 +17,34 @@
   	<!-- -->
 
 </head>
-<body>	
+<body>			
+	
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Game-In</a>
+		<!-- ESTO NO SE PARA QUE VALE -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	 	<!-- HASTA AQUI -->
 
-	<!-- ESTE HEADER LO UNICO QUE LE FALTA ES QUE AL EMPEQUEÑECERSE SE ESCONDAN LOS BOTONES -->
-	<header>
-		<!-- SI PONERMOS CONTAINER NO SE EXPANDE ENTERA Y SI LO PONEMOS FLUID PARECE QUE SI PERO NO LLEGA A OCUPAR TODA LA PANTALLA -->
-		<!-- <div class="container-fluid"> -->
-			<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-				<a class="navbar-brand" href="#">Game-In</a>
-				<!-- ESTO NO SE PARA QUE VALE -->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    		<span class="navbar-toggler-icon"></span>
-			  		</button>
-			  	<!-- HASTA AQUI -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					
+			<!-- ESTOS SON LOS BOTONES DE REGISTRO Y LOGUEO-->
+				<ul class="navbar-nav mr-auto">
+   					<li class="nav-item">
+						<a class="nav-link" href="#"><button class="btn btn-outline-success my-2 my-sm-0" type="button ">Sign-In</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="registro.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign-Up</button></a>
+					</li>
+				</ul>
+			<!-- HASTA AQUI -->
 
-			  	<!-- ESTE DIV LO QUE HACE ES SEPARAR ENTRE EL ICONO PRINCIPAL Y LOS BOTONES -->
-				<div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+		</div>
 
-				<!-- ESTOS SON LOS BOTONES DE REGISTRO Y LOGUEO-->
-				<form class="form-inline">
-					<a href="#"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-In</button></a>
-					<a href="#"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign-Up</button></a>
-				</form>
-				<!-- HASTA AQUI -->
-			</nav>
-		<!-- </div> -->
-	</header>
+				
+	</nav>
+
 
 	<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
 	<div class="container-fluid">
@@ -96,9 +100,9 @@
 			</div>
 				
 			<!-- AQUÍ FALTA EL FOOTER, ESTÁ EN OTRO ARCHIVO, PORQUE HAY QUE TRATARLO -->
-			<footer>
+			<!--<footer>
 				inffo y cosas
-			</footer>
+			</footer>-->
 		</div>	
 	</div>
 
