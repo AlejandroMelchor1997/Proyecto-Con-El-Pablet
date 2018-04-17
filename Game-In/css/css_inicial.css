@@ -1,3 +1,86 @@
+/*ESTILOS DE LA BARRA DE NAVEGACION */
+
+.logo{
+	margin-right: 35px;
+}
+
+
+
+.navbar-custom {
+	background-color:#ffbb33;
+  	border-radius:0;
+  	height: auto;
+}
+
+a.enlaces{
+	color: black !important;
+}
+
+a.enlaces:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.2); 	 
+ 	
+}
+
+.dropdown-toggle{
+	color: black !important;
+
+}
+
+
+ .dropdown-toggle:active, .open .dropdown-toggle {
+        background-color: black !important; 
+        color:white !important;
+    }
+
+.dropdown-toggle:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.2); 
+
+}
+
+.glyphicon-user{
+	color: black !important;
+}
+
+a.registro{
+	color: black !important;
+}
+
+a.registro:hover{
+	color: #bf360c !important;
+	transform: scale(1.2); 
+}
+
+
+.registro{
+	color: black;
+}
+
+.menus{
+	margin-left: 35px;
+}
+
+.form-inline{
+	position: relative;
+	float: right;
+}
+
+.login{
+	vertical-align:middle;
+	padding-left:  10px;
+	padding-right: 10px;
+}
+
+
+.acceso{
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+
+
+
 /*AQUI LA PARTE DEL BODY*/
 body {
 	background-image: url("../img/fondo_negro.jpg");
