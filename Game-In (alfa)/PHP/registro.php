@@ -25,7 +25,7 @@
 
 	<!--<div class="contenedor_tabla" align="center">-->
 		<table align="center" class="tabla_php">
-			<form action="registro_2.php" method="POST" class="contenido_tabla">
+			<form action="registro_2.php" method="GET" class="contenido_tabla">
 
 				<!-- FALTA EL CORREO Y UNA DESCRIPCION -->
 				<tr><td></td></tr>
