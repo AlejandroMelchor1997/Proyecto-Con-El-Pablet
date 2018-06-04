@@ -24,7 +24,7 @@
 			include('c:\xampp\seguridad\mysql.inc.php');
 
 			//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
-			mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar mai friend</p>');
+			mysqli_select_db($conexion, $nomBBDD) or die ('<p>Imposible conectar mai friend</p>');
 
 			//PASAMOS EL USUARIO A MINUSCULAS
 			$usuario = strtolower($usuario);
