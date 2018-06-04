@@ -11,7 +11,7 @@
 	<!-- HASTA AQUI -->
 
   	<!-- CSS PROPIO -->
-  		<link rel="stylesheet" type="text/css" href="css/css_registro.css">
+  		<link rel="stylesheet" type="text/css" href="../css_php/css_registro.css">
   	<!-- -->
 
 </head>
