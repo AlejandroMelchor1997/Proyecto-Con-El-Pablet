@@ -5,11 +5,11 @@ body {
 }
 
 
-
 .tabla_php {
-	border-radius: 7px;
 	margin-top: 10%;
 	color: white;
+	border-radius: 10px;
+	background-color: rgba(40, 167, 69, 0.8)  !important;
 }
 
 .contenedor_tabla {

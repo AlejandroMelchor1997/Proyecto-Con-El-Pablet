@@ -19,43 +19,36 @@
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="inicial.html">Game-In</a>
+			<a class="navbar-brand" href="HTML\entrada_sin_registro.html">Game-In</a>
 		</nav>
 	</header>
 
-	<div class="contenedor_tabla" align="center">
+	<!--<div class="contenedor_tabla" align="center">-->
 		<table align="center" class="tabla_php">
-			<form action="registro_2.php" method="GET" class="contenido_tabla">
+			<form action="logueo_2.php" method="POST" class="contenido_tabla">
 
-				<!-- FALTA EL CORREO Y UNA DESCRIPCION -->
-
+				<tr><td></td></tr>
+				<tr><td></td></tr>
 				<tr>
-					<td>NOMBRE:</td><td><input type="text" name="nombre"></td>
+					<td></td><td></td> <td>E-MAIL:</td><td><input type="text" name="email"></td><td></td><td></td>
 				</tr>
 				<tr>
-					<td>PRIMER APELLIDO:</td><td><input type="text" name="apellido_1"></td>
+					<td></td><td></td> <td>CONSTRASEÑA:</td><td><input type="password" name="contrasena"></td><td></td><td></td>
 				</tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
 				<tr>
-					<td>SEGUNDO APELLIDO:</td><td><input type="text" name="apellido_2"></td>
+					<td colspan="6" align="center"><input type="submit" value="Send"><input type="reset" value="Reset"></td>
 				</tr>
-				<tr>
-					<td>USUARIO:</td><td><input type="text" name="usuario"></td>
-				</tr>
-				<tr>
-					<td>CONSTRASEÑA:</td><td><input type="password" name="contrasena"></td>
-				</tr>
-				<tr>
-					<td>VALIDAR CONSTRASEÑA:</td><td><input type="password" name="validar_contrasena"></td>
-				</tr>
-				<tr>
-					<td>FECHA NACIMIENTO:</td><td><input type="date" name="fecha_nac"></td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center"><input type="submit" value="Send"><input type="reset" value="Reset"></td>
-				</tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
 			</form>
 		</table>
-	</div>
+	<!--</div>-->
 
 </body>
 </html>
