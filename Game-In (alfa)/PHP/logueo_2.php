@@ -4,7 +4,7 @@
 	$email = $_REQUEST['email'];
 	$contrasena = $_REQUEST['contrasena'];
 
-	$nomBBDD = "game-in";	
+	$nomBBDD = "game-in1";	
 
 	//SI ESTÁN RELLENOS EMPEZAMOS CON EL CODIGO
 	if ($email != "" && $contrasena != "") {
@@ -50,7 +50,7 @@
 						<!-- HASTA AQUI -->
 
 					  	<!-- CSS PROPIO -->
-					  		<link rel="stylesheet" type="text/css" href="css/css_registro.css">
+					  		<link rel="stylesheet" type="text/css" href="../css_php/css_registro.css">
 					  	<!-- -->
 
 					</head>
@@ -58,7 +58,7 @@
 
 						<header>
 							<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-								<a class="navbar-brand" href="HTML\inicio.html">Game-In</a>
+								<a class="navbar-brand" href="../HTML/inicio.html">Game-In</a>
 							</nav>
 						</header>
 						<div align="center" style="margin-top: 10%;">

@@ -19,7 +19,7 @@
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="HTML\entrada_sin_registro.html">Game-In</a>
+			<a class="navbar-brand" href="../HTML/entrada_sin_registro.html">Game-In</a>
 		</nav>
 	</header>
 
