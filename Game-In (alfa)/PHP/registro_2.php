@@ -12,7 +12,7 @@
 
 		//DESCRRIPCION
 
-		$nomBBDD = "game-in1";
+		$nomBBDD = "game-in";
 
 	//SI NO FALTA NINGUN DATO ENTRAMOS
 	if ($nombre != "" && $apellido_1 != "" && $apellido_2 != "" && $usuario != "" && $email != "" && $contrasena != "" && $validar_contrasena != "" && $fecha_nac != "" ){
