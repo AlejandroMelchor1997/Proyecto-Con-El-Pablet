@@ -1,13 +1,13 @@
 <?php
 
 	//RECOGEMOS LOS DATOS
-	$email = $_REQUEST['email'];
+	$usuario = $_REQUEST['usuario'];
 	$contrasena = $_REQUEST['contrasena'];
 
 	$nomBBDD = "game-in";	
 
 	//SI ESTÁN RELLENOS EMPEZAMOS CON EL CODIGO
-	if ($email != "" && $contrasena != "") {
+	if ($usuario != "" && $contrasena != "") {
 
 		//conexion (segura por encima de la raiz del servidor)
 		include('c:\xampp\seguridad\mysql.inc.php');
@@ -16,7 +16,7 @@
 		mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar mai friend</p>');
 
 		//VAMOS A COMPROBAR SI EL CORREO EXISTE
-		$sql = 'SELECT * FROM usuarios WHERE EMAIL = $email';
+		$sql = 'SELECT * FROM usuarios WHERE usuario = $usuario';
 
 		//EJECUTO LA SENTENCIA
 		$resultado = mysqli_query($conexion, $sql);
@@ -25,9 +25,9 @@
 		//$filas = mysqli_num_rows($resultado);
 
 		//SI EL CORREO ES IGUAL AL DE LA BBDD ENTRA
-		if ($resultado = $email) {
+		if ($resultado = $usuario) {
 			//SELECCIONAMOS LA PASS
-			$sql = 'SELECT contrasena FROM usuarios WHERE email = $email';
+			$sql = 'SELECT contrasena FROM usuarios WHERE usuario = $usuario';
 
 			//EJECUTO LA SENTENCIA
 			$resultado = mysqli_query($conexion, $sql);
@@ -58,13 +58,13 @@
 
 						<header>
 							<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-								<a class="navbar-brand" href="../HTML/inicio.html">Game-In</a>
+								<a class="navbar-brand" href="../HTML/index.html">Game-In</a>
 							</nav>
 						</header>
 						<div align="center" style="margin-top: 10%;">
 							<h1 align="center" style="color: white">Bienvenido</h1>
 
-							<a href="../HTML/inicio.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
+							<a href="../HTML/index_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
 						</div>
 
 					</body>
