@@ -50,7 +50,7 @@
 						<!-- HASTA AQUI -->
 
 					  	<!-- CSS PROPIO -->
-					  		<link rel="stylesheet" type="text/css" href="../css_php/css_registro.css">
+					  		<link rel="stylesheet" type="text/css" href="css/css_registro.css">
 					  	<!-- -->
 
 					</head>
@@ -58,13 +58,13 @@
 
 						<header>
 							<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-								<a class="navbar-brand" href="../HTML/index.html">Game-In</a>
+								<a class="navbar-brand" href="index_visitors.html">Game-In</a>
 							</nav>
 						</header>
 						<div align="center" style="margin-top: 10%;">
 							<h1 align="center" style="color: white">Bienvenido</h1>
 
-							<a href="../HTML/index_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
+							<a href="index_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
 						</div>
 
 					</body>
