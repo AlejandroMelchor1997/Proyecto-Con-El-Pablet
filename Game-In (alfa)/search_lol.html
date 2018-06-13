@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Game-In</title>
+	<title>GAME-iN</title>
 	<meta charset="utf-8">
-	
+
 	<!-- ESTO ES PROPIO DE BOOSTRAP, ES NECESARIO PAR QUE FUNCIONE EL RESTO DE COSAS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -12,15 +12,15 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 	<!-- HASTA AQUI -->
 
-	<!-- CSS PROPIO -->
 	<link rel="stylesheet" type="text/css" href="css/css_index.css">
-	<!-- -->
+
+
 
 </head>
-<body>			
+<body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
-			<a class="navbar-brand" href="index_visitors.html">Game-In</a>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="index_login.html">Game-In</a>
 
 			<!-- ESTO NO SE PARA QUE VALE -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,6 @@
 			<!-- HASTA AQUI -->
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
 				<!-- APARTADOS DE LA BARRA -->
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
@@ -40,79 +39,67 @@
 							Busqueda de jugadores
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="form_registro.html">CS-GO</a>
-							<a class="dropdown-item" href="form_registro.html">League of legends</a>
-							<a class="dropdown-item" href="form_registro.html">PUBG</a>
+							<a class="dropdown-item" href="search_csgo.html">CS-GO</a>
+            				<a class="dropdown-item" href="search_lol.html">League of legends</a>
+            				<a class="dropdown-item" href="search_ow.html">Overwatch</a>
 						</div>
 					</li>
 				</ul>
-				<!-- HASTA AQUI -->
+				<!-- PONEMOS AQUI MARGIN RIGHT PARA QUE NO SE EXPANDA LA PAGINA CON EL DESPLEGABLE -->
+				<div style="float: right;">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="img/usuario.png" width="40"></a>
 
-				<form class="form-inline my-2 my-lg-0">
-					<a class="nav-link" href="form_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button></a>
-
-					<a class="nav-link" href="form_registro.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign-Up</button></a>
-				</form>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="perfil.html">Perfil</a>
+								<a class="dropdown-item" href="#">Configuracion</a>
+								<a class="dropdown-item" href="index_visitors.html">Logout</a>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>
 
-	
 
 	<!-- CREAMOS EL SECCTION PARA AGRUPAR TODO LO QUE NO ES BARRA DE NAVEGACION -->
 	<section>
 		<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
 		<div class="container-fluid">
+			
 			<!-- CONTENEDOR EN EL QUE LE DECIMOS QUE VA A OCUPAR LAS DOCE COLUMNAS DE LA PAGINA -->
 			<div class="col-lg-12 col-md-12">
 				<div class="row">
-					<div class="info_web">
-						Esta página va a ser una Web dedicada a contactar con personas con gustes afines a los nuestros.<br/>
-						podremos filtrar por juegos, rangos etc.. Para no estar solos nunca jugando
-					</div>
-
-					<br/>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-12">
-						<div class="info_texto" >
-							<a href="form_registro.html">CS-GO</a>
-						</div>
-
-						<div class="info_foto" >
-							<a href="form_registro.html"><img src="./img/csgo_logo.jpg"  alt="CS-GO"></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-12 ">
-						<div class="info_texto">
-							<a href="form_registro.html">League of Legends</a>
-						</div>
-
-						<div class=" info_foto">
-							<a href="form_registro.html"><img src="./img/lol_logo.jpg"  alt="LOL"></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-12">
-						<div class="info_texto">
-							<a href="form_registro.html">Overwatch</a>
-						</div>
-
+					<div class="col-lg-7 col-md-12">
 						<div class="info_foto">
-							<a href="form_registro.html"><img src="./img/ow_logo.jpg"  alt="Overwatch"></a>
+							<img src="./img/lol_buscador.jpg" alt="LOL" width="80%">
 						</div>
 					</div>
-				</div>  	
+
+					<div class="col-lg-4 col-md-12">
+						<form class="info_texto" >
+							<h2>¿Cuántos jugadores buscas?:</h2>
+							<br><br> 
+							<select>
+								<option value="cantidad">1</option>
+								<option value="cantidad">2</option>
+								<option value="cantidad">3</option>
+								<option value="cantidad">4</option>
+							</select>
+							<br><br>
+							<input type="button" name="buscar" value="Buscar">
+						</form>
+					</div>
+				</div>  
 			</div>
+			
 		</div>
 		<!-- AQUÍ FALTA EL FOOTER, ESTÁ EN OTRO ARCHIVO, PORQUE HAY QUE TRATARLO -->
-			<!--<footer>
-				inffo y cosas
-			</footer>-->
-		</section>
-
-
-
-	</body>
-	</html>
+      <!--<footer>
+        inffo y cosas
+    </footer>-->
+</section>
+</body>
+</html>

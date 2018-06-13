@@ -86,9 +86,6 @@ body {
 	background-image: url("../img/fondo_negro.jpg");
 }
 
-.contenedor{
-	
-}
 .info_web {
 	margin-left: 10%;
 	width: 80%;
@@ -128,6 +125,25 @@ body {
 	color: white;
 }
 
+/*ESTILOS DEL FORMULARIOS */
+.tabla_php {
+	margin-top: 10%;
+	color: white;
+	border-radius: 10px;
+	background-color: rgba(40, 167, 69, 0.8)  !important;
+}
+
+.contenedor_tabla {
+	width: 23%;
+	border-style: solid;
+	background-color: rgba(40, 167, 69, 0.8)  !important;
+	padding-bottom: 30px;
+	margin-left: 39%;
+	margin-top: 15%;
+	border-radius: 15px;
+}
+
+
 /*ESTILOS DEL FOOTER */
 
 .footer1{
@@ -137,7 +153,6 @@ body {
 	background-color: rgba(40, 167, 69, 0.7)  !important;
 	width: 100%;
 	height: 25%;
-	
 	position: absolute;
   	bottom: 0;
 }
