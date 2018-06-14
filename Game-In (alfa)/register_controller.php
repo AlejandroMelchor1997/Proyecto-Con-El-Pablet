@@ -88,7 +88,7 @@
 							<h1 align="center" style="color: white">Gracias Por Unirte a Nuestra Comunidad</h1>
 							<h3 align="center" style="color: white">El siguiente paso es que vayas a tu perfil para poder completar el registro con tus datos de juego</h3>
 
-							<a href="index_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
+							<a href="form_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
 						</div>
 
 					</body>

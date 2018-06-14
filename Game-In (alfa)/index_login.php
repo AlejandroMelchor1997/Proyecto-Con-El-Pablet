@@ -18,6 +18,16 @@
 
 </head>
 <body>
+  <?php 
+
+  session_start();
+
+  if (!isset($_SESSION['usuario'])) {
+
+    header("Location:form_login.php");
+
+  }
+  ?>
   <header>
    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="index_login.html">Game-In</a>
@@ -39,9 +49,9 @@
             Busqueda de jugadores
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="search_csgo.html">CS-GO</a>
-            <a class="dropdown-item" href="search_lol.html">League of legends</a>
-            <a class="dropdown-item" href="search_ow.html">Overwatch</a>
+            <a class="dropdown-item" href="search_csgo.php">CS-GO</a>
+            <a class="dropdown-item" href="search_lol.php">League of legends</a>
+            <a class="dropdown-item" href="search_ow.php">Overwatch</a>
           </div>
         </li>
       </ul>
@@ -52,9 +62,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="img/usuario.png" width="40"></a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="perfil.html">Perfil</a>
-              <a class="dropdown-item" href="#">Configuracion</a>
-              <a class="dropdown-item" href="index_visitors.html">Logout</a>
+              <a class="dropdown-item" href="perfil.php">Perfil</a>
+              <a class="dropdown-item" href="mensajes.php">Mensajes</a>
+              <a class="dropdown-item" href="despedida.php">Logout</a>
             </div>
           </li>
         </ul>
@@ -81,31 +91,31 @@
         <div class="row">
           <div class="col-lg-4 col-md-12">
             <div class="info_texto" >
-              <a href="search_csgo.html">CS-GO</a>
+              <a class="enlaces" href="search_csgo.php">CS-GO</a>
             </div>
 
-            <div class="info_foto" >
-              <a href="search_csgo.html"><img src="./img/csgo_logo.jpg"  alt="CS-GO"></a>
+            <div class=" info_foto">
+              <a href="search_csgo.php"><img src="./img/csgo_logo.jpg"  alt="CS-GO" class="img_portada img-responsive img-fluid"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-12 ">
             <div class="info_texto">
-              <a href="search_lol.html">League of Legends</a>
+              <a class="enlaces" href="search_lol.php">League of Legends</a>
             </div>
 
             <div class=" info_foto">
-              <a href="search_lol.html"><img src="./img/lol_logo.jpg"  alt="LOL"></a>
+              <a href="search_lol.php"><img src="./img/lol_logo.jpg"  alt="LOL" class="img_portada img-responsive img-fluid"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-12">
             <div class="info_texto">
-              <a href="search_ow.html">Overwatch</a>
+              <a class="enlaces" href="search_ow.php">Overwatch</a>
             </div>
 
             <div class="info_foto">
-              <a href="search_ow.html"><img src="./img/ow_logo.jpg"  alt="Overwatch"></a>
+              <a href="search_ow.php"><img src="./img/ow_logo.jpg"  alt="Overwatch" class="img_portada img-responsive img-fluid"></a>
             </div>
           </div>
         </div>  

@@ -17,10 +17,21 @@
 
 
 </head>
-<body>
+<body style="background-image: url(img/ow_buscador.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed">
+
+	<?php 
+
+	session_start();
+
+	if (!isset($_SESSION['usuario'])) {
+
+		header("Location:form_login.php");
+
+	}
+	?>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="index_login.html">Game-In</a>
+			<a class="navbar-brand" href="index_login.php">Game-In</a>
 
 			<!-- ESTO NO SE PARA QUE VALE -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +50,9 @@
 							Busqueda de jugadores
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="search_csgo.html">CS-GO</a>
-            				<a class="dropdown-item" href="search_lol.html">League of legends</a>
-            				<a class="dropdown-item" href="search_ow.html">Overwatch</a>
+							<a class="dropdown-item" href="search_csgo.php">CS-GO</a>
+							<a class="dropdown-item" href="search_lol.php">League of legends</a>
+							<a class="dropdown-item" href="search_ow.php">Overwatch</a>
 						</div>
 					</li>
 				</ul>
@@ -52,9 +63,9 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="img/usuario.png" width="40"></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="perfil.html">Perfil</a>
-								<a class="dropdown-item" href="#">Configuracion</a>
-								<a class="dropdown-item" href="index_visitors.html">Logout</a>
+								<a class="dropdown-item" href="perfil.php">Perfil</a>
+								<a class="dropdown-item" href="mensjaes.php">Mensajes</a>
+								<a class="dropdown-item" href="index_visitors.php">Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -72,25 +83,21 @@
 			<!-- CONTENEDOR EN EL QUE LE DECIMOS QUE VA A OCUPAR LAS DOCE COLUMNAS DE LA PAGINA -->
 			<div class="col-lg-12 col-md-12">
 				<div class="row">
-					<div class="col-lg-7 col-md-12">
+
+					<div class="col-lg-2 col-md-12">
+						
+					</div>
+					<div class="col-lg-8 col-md-12">
+						<div class="info_texto" >
+							<h3>Listado de jugadores de Overwatch</h3>
+						</div>
 						<div class="info_foto">
-							<img src="./img/lol_buscador.jpg" alt="LOL" width="80%">
+							<img src="./img/ow_buscador.jpg" alt="Overwatch" class="img-responsive img-fluid">
 						</div>
 					</div>
 
-					<div class="col-lg-4 col-md-12">
-						<form class="info_texto" >
-							<h2>¿Cuántos jugadores buscas?:</h2>
-							<br><br> 
-							<select>
-								<option value="cantidad">1</option>
-								<option value="cantidad">2</option>
-								<option value="cantidad">3</option>
-								<option value="cantidad">4</option>
-							</select>
-							<br><br>
-							<input type="button" name="buscar" value="Buscar">
-						</form>
+					<div class="col-lg-2 col-md-12">
+						
 					</div>
 				</div>  
 			</div>

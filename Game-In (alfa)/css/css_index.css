@@ -5,37 +5,28 @@
 }
 
 
-
 .navbar-custom {
 	background-color:#ffbb33;
   	border-radius:0;
   	height: auto;
 }
 
-a.enlaces{
-	color: black !important;
-}
-
-a.enlaces:hover{
-	color: #bf360c !important;
- 	 transform: scale(1.2); 	 
- 	
-}
-
 .dropdown-toggle{
-	color: black !important;
+	color: white !important;
 
 }
 
-
- .dropdown-toggle:active, .open .dropdown-toggle {
-        background-color: black !important; 
+.nav-link{
+	color:white !important;	
+}
+.dropdown-toggle:active, .open .dropdown-toggle {
+        background-color: white !important; 
         color:white !important;
-    }
+}
 
 .dropdown-toggle:hover{
 	color: #bf360c !important;
- 	 transform: scale(1.2); 
+ 	 transform: scale(1.1); 
 
 }
 
@@ -43,41 +34,10 @@ a.enlaces:hover{
 	color: black !important;
 }
 
-a.registro{
-	color: black !important;
-}
-
-a.registro:hover{
-	color: #bf360c !important;
-	transform: scale(1.2); 
-}
-
-
-.registro{
-	color: black;
-}
-
-.menus{
-	margin-left: 35px;
-}
-
 .form-inline{
 	position: relative;
 	float: right;
 }
-
-.login{
-	vertical-align:middle;
-	padding-left:  10px;
-	padding-right: 10px;
-}
-
-
-.acceso{
-	margin-left: 15px;
-	margin-top: 5px;
-}
-
 
 
 
@@ -97,12 +57,6 @@ body {
 	color: white;
 }
 
-.contenedor_info1 {
-	margin-left: 10%;
-	width: 80%;
-	overflow: auto; /*ESTO SIRVE PARA QUE NO SE DESCUADRE TODO*/
-}
-
 .info_foto {
 	
 	margin-left: 5%;
@@ -114,6 +68,10 @@ body {
 	color: white;
 }
 
+.img_portada:hover{
+	transform: scale(1.02); 
+}
+
 .info_texto {
 	
 	margin-left: 5%;
@@ -123,6 +81,17 @@ body {
 	border-radius: 10px;
 	padding: 10px;
 	color: white;
+}
+
+a.enlaces{
+	color: black !important;
+	font-size: 25px;
+}
+
+a.enlaces:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.2); 	 
+ 	
 }
 
 /*ESTILOS DEL FORMULARIOS */

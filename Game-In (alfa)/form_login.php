@@ -11,12 +11,12 @@
 	<!-- HASTA AQUI -->
 
   	<!-- CSS PROPIO -->
-  		<link rel="stylesheet" type="text/css" href="css/css_registro.css">
+  		<link rel="stylesheet" type="text/css" href="css/css_index.css">
   	<!-- -->
 
 </head>
 <body>	
-
+	
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
 			<a class="navbar-brand" href="index_visitors.html">Game-In</a>
@@ -39,18 +39,18 @@
 							Busqueda de jugadores
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="form_registro.html">CS-GO</a>
-							<a class="dropdown-item" href="form_registro.html">League of legends</a>
-							<a class="dropdown-item" href="form_registro.html">PUBG</a>
+							<a class="dropdown-item" href="form_registro.php">CS-GO</a>
+							<a class="dropdown-item" href="form_registro.php">League of legends</a>
+							<a class="dropdown-item" href="form_registro.php">PUBG</a>
 						</div>
 					</li>
 				</ul>
 				<!-- HASTA AQUI -->
 
 				<form class="form-inline my-2 my-lg-0">
-					<a class="nav-link" href="form_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button></a>
+					<a class="nav-link" href="form_login.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button></a>
 
-					<a class="nav-link" href="form_registro.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign-Up</button></a>
+					<a class="nav-link" href="form_registro.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign-Up</button></a>
 				</form>
 			</div>
 		</nav>
@@ -66,7 +66,7 @@
 					<td></td><td></td> <td>USUARIO:</td><td><input type="text" name="usuario"></td><td></td><td></td>
 				</tr>
 				<tr>
-					<td></td><td></td> <td>CONSTRASEÑA:</td><td><input type="password" name="contrasena"></td><td></td><td></td>
+					<td></td><td></td> <td>CONSTRASEÑA:</td><td><input type="password" name="password"></td><td></td><td></td>
 				</tr>
 				<tr><td></td></tr>
 				<tr><td></td></tr>

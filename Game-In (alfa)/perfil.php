@@ -13,21 +13,31 @@
 
 	<link rel="stylesheet" type="text/css" href="css/css_index.css">
 
-  
+	
 
 </head>
 <body>
+	<?php 
+
+	session_start();
+
+	if (!isset($_SESSION['usuario'])) {
+
+		header("Location:form_login.php");
+
+	}
+	?>
 	<header>
-	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-	 		<a class="navbar-brand" href="index_login.html">Game-In</a>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="index_login.html">Game-In</a>
 
-	 		<!-- ESTO NO SE PARA QUE VALE -->
-	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    		<span class="navbar-toggler-icon"></span>
-	  		</button>
-	  		<!-- HASTA AQUI -->
+			<!-- ESTO NO SE PARA QUE VALE -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- HASTA AQUI -->
 
-	  		<!--Desplegable de los juegos -->
+			<!--Desplegable de los juegos -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="#">Foro</a>
@@ -42,7 +52,7 @@
 					</div>
 				</li>
 			</ul>
-					<!-- Hasta aqui -->
+			<!-- Hasta aqui -->
 		</nav>
 	</header>
 
@@ -62,11 +72,11 @@
 					<textarea name="comentarios" rows="7" cols="80">Descripcion</textarea>	
 					<br/>
 					<a href="modif_perf.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 
-</body>
-</html>
+	</body>
+	</html>
