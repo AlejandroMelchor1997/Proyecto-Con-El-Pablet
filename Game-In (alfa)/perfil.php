@@ -76,7 +76,7 @@
 					//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
 					mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
 				
-					//VAMOS A COMPROBAR SI EL USUARIO EXISTE
+					//VAMOS A SACAR EL USUARIO Y SUS JUEGOS
 					$sql = "SELECT * FROM usuarios WHERE USUARIO = '$nombre_sesion'";
 
 					//EJECUTO LA SENTENCIA
@@ -96,16 +96,41 @@
 						<br/>Descripcion:
 						<?php
 							echo $array["DESCRIPCION"];
+							$id = $array["ID_USUARIO"];
 						?>
 						<br/><br/><br/>
 						<?php
+
+							$sql2 = "SELECT * FROM inscripcion WHERE id_usuario = '$id'";
+							//EJECUTO LA SENTENCIA
+							$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
+
+							?>
+							Juegos:
+									<br/>
+							<?php
+							while($array2 = mysqli_fetch_assoc($resultado2)){
+								if($array2["ID_JUEGO"] == "1"){
+									?><img src="./img/csgo_logo.jpg" alt="CS-GO" class="img_portada img-responsive img-fluid" width="50px"><?php
+								} elseif ($array2["ID_JUEGO"] == "2") {
+									?><img src="./img/lol_logo.jpg" alt="LOL" class="img_portada img-responsive img-fluid" width="50px"><?php
+								} else{
+									?><img src="./img/ow_logo.jpg" alt="OW" class="img_portada img-responsive img-fluid" width="50px"><?php
+								}
+								
+							}
+							?>
+							<br/><br/><br/>
+							<?php
+
+
 					}
 
 					?>
 
 				
 				
-					<a href="modif_perf.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
+					<a href="modif_perf.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
 					</div>
 				</div>
 			</div>

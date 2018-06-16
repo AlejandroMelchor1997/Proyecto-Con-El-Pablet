@@ -15,7 +15,7 @@
 	<!-- -->
 
 	<!-- ABRO JAVASCRIPT PARA VALIDAR EL FORMULARIO -->
-	<!-- <script type="text/javascript">
+	<!--<script type="text/javascript">
 		function validarFormulario(){
 			alert("HOLA QUE TAL");
 
@@ -33,11 +33,9 @@
 			//VALIDAMOS QUE LOS CAMPOS NO ESTEN EN BLANCO
 			if (nombre == " " || apellido_1 == " " || apellido_2 == " " || usuario == " " || contrasena == " " || validar_contrasena == " " || fecha_nac== " ") {
 				alert("TODOS LOS CAMPOS SON OBLIGATORIOS");
-			} else{
-
 			}
 
-/*
+
 			if(nombre.length>20){
 				alert("El nombre no puede contener mas de 20 caracteres");
 			}
@@ -47,16 +45,16 @@
 			if(apellido_2.length>50){
 				alert("Los apellidos no pueden sobrepasar los 50 caracteres");
 			}
-*/
+
 		}
 
-		/*function validaNombre(){
+		function validaNombre(){
 			var nombre = document.getElementById('nombre').value;
 
 			if (nombre == " "){
 				alert("TODOS LOS CAMPOS SON OBLIGATORIOS");
 			}
-		}*/
+		}
 	</script>-->
 
 </head>
@@ -116,7 +114,7 @@
 				</div>
 				<div class="row">
 					<table align="center" class="tabla_php">
-						<form onsubmit="return validarFormulario()" action="register_controller.php" method="GET" class="contenido_tabla" >
+						<form onsubmit="validarFormulario()" action="register_controller.php" method="GET" class="contenido_tabla" >
 
 							<!-- FALTA EL CORREO Y UNA DESCRIPCION -->
 							<tr><td></td></tr>
@@ -147,6 +145,9 @@
 							</tr>
 							<tr>
 								<td></td><td></td> <td>DESCRIPCION:</td><td><input type="text" id="descripcion_id" name="descripcion"></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td></td><td></td> <td>JUEGOS:</td><td><input type="checkbox" name="juegos[]" value='1'>CS-GO <input type="checkbox" name="juegos[]" value='2'>LOL <input type="checkbox" name="juegos[]" value='3'>OverWatch</td><td></td><td></td>
 							</tr>
 							<tr><td></td></tr>
 							<tr><td></td></tr>
