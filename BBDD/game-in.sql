@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-06-2018 a las 17:41:54
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.8
+-- Tiempo de generación: 16-06-2018 a las 11:40:37
+-- Versión del servidor: 10.1.32-MariaDB
+-- Versión de PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -80,67 +80,32 @@ CREATE TABLE `usuarios` (
   `USUARIO` varchar(20) NOT NULL,
   `EMAIL` varchar(40) NOT NULL,
   `CONTRASENA` varchar(60) NOT NULL,
-  `FECHA_NAC` date NOT NULL
+  `FECHA_NAC` date NOT NULL,
+  `DESCRIPCION` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID_USUARIO`, `NOMBRE`, `APELLIDO_1`, `APELLIDO_2`, `USUARIO`, `EMAIL`, `CONTRASENA`, `FECHA_NAC`) VALUES
-(1, 'asd', 'asd', 'asd', 'asd', '', 'asd', '1997-11-29'),
-(2, 'Pablote', 'saez', 'maroto', 'Pablote', '', '1234', '2202-02-02'),
-(3, 'alex', 'Gitano', 'Rumano', 'alex', 'alex@gmail.com', 'alex', '1996-01-01'),
-(4, 'minicay', 'bbbb', 'ccccc', 'minicay', 'minicay@gmail.com', '1234', '1988-07-23');
+INSERT INTO `usuarios` (`ID_USUARIO`, `NOMBRE`, `APELLIDO_1`, `APELLIDO_2`, `USUARIO`, `EMAIL`, `CONTRASENA`, `FECHA_NAC`, `DESCRIPCION`) VALUES
+(0, '', '', '', '', '', '', '0000-00-00', ''),
+(1, 'asd', 'asd', 'asd', 'asd', '', 'asd', '1997-11-29', ''),
+(2, 'Pablote', 'saez', 'maroto', 'Pablote', '', '1234', '2202-02-02', ''),
+(3, 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', '1111-11-11', ''),
+(4, 'AlexThrash', 'Melchor', 'Martinez', 'alexthrash', 'alexman.melchor@gmail.com', '1997', '1997-11-29', ''),
+(6, 'AlexThrash2', 'melchor', 'martinez', 'alexthrash2', 'alexman.melchor@gmail.com', 'alex', '1997-11-29', 'Hola me gusta el counter y el lol y el overwatch jeje salu2'),
+(7, 'Mamonsete', 'de', 'pijas', 'mamonsete', 'mamonsete@gmail.com', 'mamon', '3203-12-04', 'Hola me llamo mamon y me gusta jugar a los juegos Salu2');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `inscripcion`
---
-ALTER TABLE `inscripcion`
-  ADD PRIMARY KEY (`ID_INCRIPCION`),
-  ADD KEY `fk_id_usuario` (`ID_USUARIO`),
-  ADD KEY `fk_id_juego` (`ID_JUEGO`);
-
---
--- Indices de la tabla `juegos`
---
-ALTER TABLE `juegos`
-  ADD PRIMARY KEY (`ID_JUEGO`);
-
---
--- Indices de la tabla `mensajes`
---
-ALTER TABLE `mensajes`
-  ADD KEY `fk_id_usuario_emisor` (`ID_USUARIO_EMISOR`),
-  ADD KEY `fk_id_usuario_receptor` (`ID_USUARIO_RECEPTOR`);
-
---
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`ID_USUARIO`);
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `inscripcion`
---
-ALTER TABLE `inscripcion`
-  ADD CONSTRAINT `fk_id_juego` FOREIGN KEY (`ID_JUEGO`) REFERENCES `juegos` (`ID_JUEGO`),
-  ADD CONSTRAINT `fk_id_usuario` FOREIGN KEY (`ID_USUARIO`) REFERENCES `usuarios` (`ID_USUARIO`);
-
---
--- Filtros para la tabla `mensajes`
---
-ALTER TABLE `mensajes`
-  ADD CONSTRAINT `fk_id_usuario_emisor` FOREIGN KEY (`ID_USUARIO_EMISOR`) REFERENCES `usuarios` (`ID_USUARIO`),
-  ADD CONSTRAINT `fk_id_usuario_receptor` FOREIGN KEY (`ID_USUARIO_RECEPTOR`) REFERENCES `usuarios` (`ID_USUARIO`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
