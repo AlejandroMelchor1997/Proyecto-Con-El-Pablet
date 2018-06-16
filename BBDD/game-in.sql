@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2018 a las 11:40:37
+-- Tiempo de generación: 16-06-2018 a las 11:58:09
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -89,13 +89,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID_USUARIO`, `NOMBRE`, `APELLIDO_1`, `APELLIDO_2`, `USUARIO`, `EMAIL`, `CONTRASENA`, `FECHA_NAC`, `DESCRIPCION`) VALUES
-(0, '', '', '', '', '', '', '0000-00-00', ''),
-(1, 'asd', 'asd', 'asd', 'asd', '', 'asd', '1997-11-29', ''),
-(2, 'Pablote', 'saez', 'maroto', 'Pablote', '', '1234', '2202-02-02', ''),
-(3, 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', '1111-11-11', ''),
-(4, 'AlexThrash', 'Melchor', 'Martinez', 'alexthrash', 'alexman.melchor@gmail.com', '1997', '1997-11-29', ''),
-(6, 'AlexThrash2', 'melchor', 'martinez', 'alexthrash2', 'alexman.melchor@gmail.com', 'alex', '1997-11-29', 'Hola me gusta el counter y el lol y el overwatch jeje salu2'),
-(7, 'Mamonsete', 'de', 'pijas', 'mamonsete', 'mamonsete@gmail.com', 'mamon', '3203-12-04', 'Hola me llamo mamon y me gusta jugar a los juegos Salu2');
+(1, 'prueba1', 'prue', 'ba1', 'prueba1', 'prueba1@gmail.com', '1234', '1997-11-29', 'Hola, este es el perfil de prueba1, primer usuario de la pagina web, un saludito a todxs'),
+(2, 'prueba2', 'prue', 'ba2', 'prueba2', 'prueba2@gmail.com', '1234', '1988-06-12', 'Hola a todxs, este es el segundo perfil que se crea, prueba 2, salu2');
 
 --
 -- Índices para tablas volcadas
