@@ -9,12 +9,14 @@
 		$contrasena = $_REQUEST['contrasena'];
 		$validar_contrasena = $_REQUEST['validar_contrasena'];
 		$fecha_nac = $_REQUEST['fecha_nac'];
+		$descripcion = $_REQUEST['descripcion'];
 
 		//DESCRRIPCION
 
 		$nomBBDD = "game-in";
 
 	//SI NO FALTA NINGUN DATO ENTRAMOS
+	//if(isset($_REQUEST['usuario'], $_REQUEST['usuario'], $_REQUEST['usuario'], $_REQUEST['usuario'], $_REQUEST['usuario'], $_REQUEST['usuario']))
 	if ($nombre != "" && $apellido_1 != "" && $apellido_2 != "" && $usuario != "" && $email != "" && $contrasena != "" && $validar_contrasena != "" && $fecha_nac != "" ){
 		
 		//COMPROBAMOS SI LA CONTRASEÑA ES LA MISMA
@@ -52,7 +54,7 @@
 				$id_usuario = $filas + 1;
 
 				//HACEMOS LA SENTENCIA PARA INSERTAR EL USUARIO
-				$sql = "INSERT INTO usuarios VALUES ('$id_usuario','$nombre','$apellido_1','$apellido_2','$usuario', '$email','$contrasena','$fecha_nac')";
+				$sql = "INSERT INTO usuarios VALUES ('$id_usuario','$nombre','$apellido_1','$apellido_2','$usuario', '$email','$contrasena','$fecha_nac', '$descripcion')";
 
 				//EJECUTO LA SENTENCIA
 				$resultado = mysqli_query($conexion, $sql);
@@ -88,7 +90,7 @@
 							<h1 align="center" style="color: white">Gracias Por Unirte a Nuestra Comunidad</h1>
 							<h3 align="center" style="color: white">El siguiente paso es que vayas a tu perfil para poder completar el registro con tus datos de juego</h3>
 
-							<a href="form_login.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
+							<a href="form_login.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: rgba(40, 167, 69, 0.8)  !important; color: white;">Entrar</button></a>
 						</div>
 
 					</body>
@@ -107,7 +109,10 @@
 		}		
 	}
 	else {
-		echo "TIENEN QUE ESTAR TODOS LOS CAMPOS RELLENOS";
+		include 'form_registro.php';
+		?> 
+		<h2 align="center" style="color: white;">No puede haber campos sin rellenar</h2>
+		<?php
 	}
 
 ?>

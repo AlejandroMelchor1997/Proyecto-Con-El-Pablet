@@ -31,7 +31,7 @@
 	?>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="index_login.html">Game-In</a>
+			<a class="navbar-brand" href="index_login.php">Game-In</a>
 
 			<!-- ESTO NO SE PARA QUE VALE -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,9 +50,9 @@
 							Busqueda de jugadores
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="search_csgo.html">CS-GO</a>
-							<a class="dropdown-item" href="search_lol.html">League of legends</a>
-							<a class="dropdown-item" href="search_ow.html">Overwatch</a>
+							<a class="dropdown-item" href="search_csgo.php">CS-GO</a>
+							<a class="dropdown-item" href="search_lol.php">League of legends</a>
+							<a class="dropdown-item" href="search_ow.php">Overwatch</a>
 						</div>
 					</li>
 				</ul>
@@ -63,7 +63,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="img/usuario.png" width="40"></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="perfil.html">Perfil</a>
+								<a class="dropdown-item" href="perfil.php">Perfil</a>
 								<a class="dropdown-item" href="mensajes.html">Mensajes</a>
 								<a class="dropdown-item" href="index_visitors.html">Logout</a>
 							</div>

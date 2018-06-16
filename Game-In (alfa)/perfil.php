@@ -20,16 +20,19 @@
 	<?php 
 
 	session_start();
-
+	
 	if (!isset($_SESSION['usuario'])) {
 
 		header("Location:form_login.php");
 
+	} else{
+		//SI LA SESION EXISTE SACA SU VALOR PARA MOSTRARLO
+		$nombre_sesion = $_SESSION['usuario'];
 	}
 	?>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="index_login.html">Game-In</a>
+			<a class="navbar-brand" href="index_login.php">Game-In</a>
 
 			<!-- ESTO NO SE PARA QUE VALE -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +66,45 @@
 			<!-- DIV QUE OCUPARA LA MITAD DE LA PANTALLA -->
 			<div class="info_texto col-6 row" style="margin-left: 25%">
 				<div class="col-12">
-					<h2 align="center">Usuario: Usuario recogido de la BBDD</h2><br/>
-					Nombre: nombre recogido de la BBDD<br/>
-					Apellidos: Apellidos recogido de la BBDD<br/>
-					Email: email recogido de la BBDD<br/>
-					
-					<br/><br/><br/>
-					<textarea name="comentarios" rows="7" cols="80">Descripcion</textarea>	
-					<br/>
+					<h2 align="center"><?php echo $nombre_sesion ?></h2><br/>
+
+					<?php
+
+					//conexion (segura por encima de la raiz del servidor)
+					include('c:\xampp\seguridad\mysql.inc.php');
+
+					//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
+					mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
+				
+					//VAMOS A COMPROBAR SI EL USUARIO EXISTE
+					$sql = "SELECT * FROM usuarios WHERE USUARIO = '$nombre_sesion'";
+
+					//EJECUTO LA SENTENCIA
+					$resultado = mysqli_query($conexion, $sql) or die (mysqli_error($conexion));
+
+					//LO TRANSFORMO A UN ARRAY
+					while($array = mysqli_fetch_assoc($resultado)){
+						?>
+						Nombre: 
+						<?php
+							echo $array["NOMBRE"];
+						?>
+						<br/>Apellidos: 
+						<?php
+							echo $array["APELLIDO_1"]." ".$array["APELLIDO_2"];
+						?>
+						<br/>Descripcion:
+						<?php
+							echo $array["DESCRIPCION"];
+						?>
+						<br/><br/><br/>
+						<?php
+					}
+
+					?>
+
+				
+				
 					<a href="modif_perf.html"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
 					</div>
 				</div>
