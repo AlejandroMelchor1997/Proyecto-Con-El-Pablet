@@ -124,16 +124,16 @@
 												$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
 
 											//LO TRANSFORMO A UN ARRAY
-												$array2 =  mysqli_fetch_assoc($resultado2);
+												$array2 = mysqli_fetch_row($resultado2);
 
 												foreach ($array2 as $value2) {
-
+												 													
 													echo $value2;
 													?>
 													</td>
-													<td><a href="perfil2.php?usuario=<?php $value2 ?>">Ver Perfil</a></td>
-
 													<?php
+													echo '<td><a href="perfil2.php?usuario='.$value2.'">Ver Perfil</a></td>';
+
 												}
 
 												?> 
