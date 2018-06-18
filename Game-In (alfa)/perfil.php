@@ -130,7 +130,7 @@
 
 				
 				
-					<a href="modif_perf.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
+					<a href="modif_perf1.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>	
 					</div>
 				</div>
 			</div>

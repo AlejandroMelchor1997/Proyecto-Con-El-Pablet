@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	
 	<!-- ESTO ES PROPIO DE BOOSTRAP, ES NECESARIO PAR QUE FUNCIONE EL RESTO DE COSAS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -12,21 +11,21 @@
 	<!-- HASTA AQUI -->
 
 	<link rel="stylesheet" type="text/css" href="css/css_index.css">
-
-	
-
 </head>
 <body>
-	<?php 
-
-	session_start();
+	<?php
+session_start();
 	
 	if (!isset($_SESSION['usuario'])) {
 
 		header("Location:form_login.php");
 
-	} 
+	} else{
+		//SI LA SESION EXISTE SACA SU VALOR PARA MOSTRARLO
+		$nombre_sesion = $_SESSION['usuario'];
+	}
 	?>
+
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 			<a class="navbar-brand" href="index_login.php">Game-In</a>
@@ -56,81 +55,46 @@
 		</nav>
 	</header>
 
-	<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
+		<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
 	<!-- Y DENTRO CREAMOS OTRO PARA QUE NO OCUPE TODO EL ANCHO Y NOS DEJE UNOS MARGENES -->
 	<div class="container-fluid">
 		<div class="12-col">
 			<!-- DIV QUE OCUPARA LA MITAD DE LA PANTALLA -->
 			<div class="info_texto col-6 row" style="margin-left: 25%">
 				<div class="col-12">
-					<h2 align="center"></h2><br/>
-
+					
 					<?php
-
-					$usuario = $_REQUEST['usuario'];
+					$nom = $_REQUEST['nombreN'];
+					$ape1 = $_REQUEST['ape1N'];
+					$ape2 = $_REQUEST['ape2N'];
+					$desc = $_REQUEST['desc'];
 
 					//conexion (segura por encima de la raiz del servidor)
-					include('c:\xampp\seguridad\mysql.inc.php');
+						include('c:\xampp\seguridad\mysql.inc.php');
 
-					//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
-					mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
-				
-					//VAMOS A SACAR EL USUARIO Y SUS JUEGOS
-					$sql = "SELECT * FROM usuarios WHERE USUARIO = '$usuario'";
+						//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
+						mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
+					
+						//VAMOS A SACAR EL USUARIO Y SUS JUEGOS
+						$sql = "SELECT * FROM usuarios WHERE USUARIO = '$nombre_sesion'";
 
-					//EJECUTO LA SENTENCIA
-					$resultado = mysqli_query($conexion, $sql) or die (mysqli_error($conexion));
+						//EJECUTO LA SENTENCIA
+						$resultado = mysqli_query($conexion, $sql) or die (mysqli_error($conexion));
 
-					//LO TRANSFORMO A UN ARRAY
-					while($array = mysqli_fetch_assoc($resultado)){
-						?>
-						Nombre: 
-						<?php
-							echo $array["NOMBRE"];
-						?>
-						<br/>Apellidos: 
-						<?php
-							echo $array["APELLIDO_1"]." ".$array["APELLIDO_2"];
-						?>
-						<br/>Descripcion:
-						<?php
-							echo $array["DESCRIPCION"];
-							$id = $array["ID_USUARIO"];
-						?>
-						<br/><br/><br/>
-						<?php
+						//LO TRANSFORMO A UN ARRAY
+						$array = mysqli_fetch_assoc($resultado);
+						$id = $array["ID_USUARIO"];
 
-							$sql2 = "SELECT * FROM inscripcion WHERE id_usuario = '$id'";
-							//EJECUTO LA SENTENCIA
-							$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
+						$sql2 = "UPDATE usuarios SET NOMBRE = '$nom', APELLIDO_1 = '$ape1', APELLIDO_2 = '$ape2', DESCRIPCION = '$desc' WHERE ID_USUARIO = $id";
 
-							?>
-							Juegos:
-									<br/>
-							<?php
-							while($array2 = mysqli_fetch_assoc($resultado2)){
-								if($array2["ID_JUEGO"] == "1"){
-									?><img src="./img/csgo_logo.jpg" alt="CS-GO" class="img_portada img-responsive img-fluid" width="50px"><?php
-								} elseif ($array2["ID_JUEGO"] == "2") {
-									?><img src="./img/lol_logo.jpg" alt="LOL" class="img_portada img-responsive img-fluid" width="50px"><?php
-								} else{
-									?><img src="./img/ow_logo.jpg" alt="OW" class="img_portada img-responsive img-fluid" width="50px"><?php
-								}
-								
-							}
-							?>
-							<br/><br/><br/>
-							<?php
+						//EJECUTO LA SENTENCIA
+						$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
 
 
-					}
 
 					?>
 
-				
-				
-					<a href="perfil2 - copia.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Enviar Mensaje
-					</button><a>		
+					<!--<a href="modif_perf.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>-->
 					</div>
 				</div>
 			</div>
