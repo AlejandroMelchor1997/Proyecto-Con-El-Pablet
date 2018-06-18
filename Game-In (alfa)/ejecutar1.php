@@ -94,7 +94,7 @@ session_start();
 
 					?>
 
-					<!--<a href="modif_perf.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>-->
+					<h2>Su perfil se ha modificado con exito</h2>
 					</div>
 				</div>
 			</div>
