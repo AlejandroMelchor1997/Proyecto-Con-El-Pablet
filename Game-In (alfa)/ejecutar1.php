@@ -85,6 +85,10 @@ session_start();
 						$array = mysqli_fetch_assoc($resultado);
 						$id = $array["ID_USUARIO"];
 
+						if ($nom = "") {
+							$nom = $array["NOMBRE"];
+						}
+
 						$sql2 = "UPDATE usuarios SET NOMBRE = '$nom', APELLIDO_1 = '$ape1', APELLIDO_2 = '$ape2', DESCRIPCION = '$desc' WHERE ID_USUARIO = $id";
 
 						//EJECUTO LA SENTENCIA
@@ -95,6 +99,7 @@ session_start();
 					?>
 
 					<h2>Su perfil se ha modificado con exito</h2>
+					<a href="index_login.php">Volver</a>
 					</div>
 				</div>
 			</div>
