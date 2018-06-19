@@ -129,8 +129,7 @@
 
 				
 				
-					<a href="perfil2 - copia.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Enviar Mensaje
-					</button><a>		
+					<?php echo '<a href="mensaje_correo.php?usuario='.$usuario.'"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Enviar Mensaje</button><a>' ?>
 					</div>
 				</div>
 			</div>

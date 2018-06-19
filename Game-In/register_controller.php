@@ -1,10 +1,10 @@
 <?php
 
 	//RECOGEMOS LOS DATOS
-$nombre = $_REQUEST['usuario'];
-$apellido_1 = $_REQUEST['apellido_1'];
-$apellido_2 = $_REQUEST['apellido_2'];
-$usuario = $_REQUEST['usuario'];
+$nombre = strtolower($_REQUEST['nombre']);
+$apellido_1 = strtolower($_REQUEST['apellido_1']);
+$apellido_2 = strtolower($_REQUEST['apellido_2']);
+$usuario = strtolower($_REQUEST['usuario']);
 $email = $_REQUEST['email'];
 $contrasena = $_REQUEST['contrasena'];
 $validar_contrasena = $_REQUEST['validar_contrasena'];
@@ -32,7 +32,7 @@ if ($nombre != "" && $apellido_1 != "" && $apellido_2 != "" && $usuario != "" &&
 		mysqli_select_db($conexion, $nomBBDD) or die ('<p>Imposible conectar mai friend</p>');
 
 			//PASAMOS EL USUARIO A MINUSCULAS
-		$usuario = strtolower($usuario);
+		//$usuario = strtolower($usuario);
 
 			//COMPROBAMOS SI EXISTE EN LA BASE DE DATOS
 		$sql = "SELECT * FROM usuarios WHERE usuario='".$usuario."'";

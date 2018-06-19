@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -13,8 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="css/css_index.css">
 </head>
 <body>
-		<?php
-	session_start();
+	<?php
+session_start();
 	
 	if (!isset($_SESSION['usuario'])) {
 
@@ -24,7 +24,7 @@
 		//SI LA SESION EXISTE SACA SU VALOR PARA MOSTRARLO
 		$nombre_sesion = $_SESSION['usuario'];
 	}
-		?>
+	?>
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -62,10 +62,14 @@
 			<!-- DIV QUE OCUPARA LA MITAD DE LA PANTALLA -->
 			<div class="info_texto col-6 row" style="margin-left: 25%">
 				<div class="col-12">
-					<h2 align="center"><?php echo $nombre_sesion ?></h2><br/>
-
+					
 					<?php
-						//conexion (segura por encima de la raiz del servidor)
+					$nom = $_REQUEST['nombreN'];
+					$ape1 = $_REQUEST['ape1N'];
+					$ape2 = $_REQUEST['ape2N'];
+					$desc = $_REQUEST['desc'];
+
+					//conexion (segura por encima de la raiz del servidor)
 						include('c:\xampp\seguridad\mysql.inc.php');
 
 						//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
@@ -81,30 +85,35 @@
 						$array = mysqli_fetch_assoc($resultado);
 						$id = $array["ID_USUARIO"];
 
+						/*
+						if ($nom = "") {
+							$nom = $array["NOMBRE"];
+						}
+						if ($ape1 = "") {
+							$ape1 = $array["APELLIDO_1"];
+						}
+						if ($ape2 = "") {
+							$ape2 = $array["APELLIDO_2"];
+						}
+						if ($desc = "") {
+							$desc = $array["DESCRIPCION"];
+						}
+						*/
+						
+						//HACERLO CON LO DE ALEX Y LO DE PABLO, QUE CARGUE DIRECTAMENTE
+
+
+						$sql2 = "UPDATE usuarios SET NOMBRE = '$nom', APELLIDO_1 = '$ape1', APELLIDO_2 = '$ape2', DESCRIPCION = '$desc' WHERE ID_USUARIO = $id";
+
+						//EJECUTO LA SENTENCIA
+						$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
+
+
+
 					?>
 
-					<form action="ejecutar1.php" method="GET">
-						<table>
-							<tr>
-								<td>Nombre Nuevo</td><td><input type="text" name="nombreN"></td>
-							</tr>
-							<tr>
-								<td>Primer Apellido</td><td><input type="text" name="ape1N"></td>
-							</tr>
-							<tr>
-								<td>Segundo Apellido</td><td><input type="text" name="ape2N"></td>
-							</tr>
-							<tr>
-								<td>Nueva descripcion</td><td><input type="text" name="desc"></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="submit" value="Modificar"></td>
-							</tr>
-						</table>
-					</form>
-
-					
-					<!--<a href="modif_perf.php"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Modificar perfil</button><a>-->
+					<h2>Su perfil se ha modificado con exito</h2>
+					<a href="index_login.php">Volver</a>
 					</div>
 				</div>
 			</div>

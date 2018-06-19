@@ -93,62 +93,62 @@
 						</div>
 						<div class="info_texto">
 
-						<table align="center" class="tabla_php">
-					<?php
+							<table align="center" class="tabla_php">
+						<?php
 
-						//conexion (segura por encima de la raiz del servidor)
-						include('c:\xampp\seguridad\mysql.inc.php');
+							//conexion (segura por encima de la raiz del servidor)
+							include('c:\xampp\seguridad\mysql.inc.php');
 
-						//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
-						mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
+							//SELECCIONAMOS LA BASE DE DATOS CON LA QUE VAMOS A TRABAJAR
+							mysqli_select_db($conexion, 'game-in') or die ('<p>Imposible conectar</p>');
 
-						//VAMOS A COMPROBAR SI EL USUARIO EXISTE
-						$sql = "SELECT ID_USUARIO FROM inscripcion WHERE id_juego = 1";
-
-						//EJECUTO LA SENTENCIA
-						$resultado = mysqli_query($conexion, $sql) or die (mysqli_error($conexion));
-
-						//LO TRANSFORMO A UN ARRAY
-						//$array = mysqli_fetch_assoc($resultado);
-
-						//foreach ($array as $value) {
-						while ($fila = mysqli_fetch_assoc($resultado)) {
-					
-					
-					?>
-
-					<tr>
-						<td> 
-						<?php 
-							//echo $fila['ID_USUARIO'];
-
-							$aidi = $fila['ID_USUARIO'];
-							$sql2 = "SELECT USUARIO FROM usuarios WHERE id_usuario = '$aidi'";
+							//VAMOS A COMPROBAR SI EL USUARIO EXISTE
+							$sql = "SELECT ID_USUARIO FROM inscripcion WHERE id_juego = 1";
 
 							//EJECUTO LA SENTENCIA
-							$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
-	
+							$resultado = mysqli_query($conexion, $sql) or die (mysqli_error($conexion));
+
 							//LO TRANSFORMO A UN ARRAY
-							//$array2 = mysqli_fetch_assoc($resultado2);
+							//$array = mysqli_fetch_assoc($resultado);
 
-							//foreach ($array2 as $value2) {
-							while($fila2 = mysqli_fetch_assoc($resultado2)){
-										 													
-								echo $fila2['USUARIO'];
+							//foreach ($array as $value) {
+							while ($fila = mysqli_fetch_assoc($resultado)) {
+						
+						
 						?>
-						</td>
-						<?php
-							echo '<td><a href="perfil2.php?usuario='.$fila2['USUARIO'].'">Ver Perfil</a></td>';
+
+						<tr>
+							<td> 
+							<?php 
+								//echo $fila['ID_USUARIO'];
+
+								$aidi = $fila['ID_USUARIO'];
+								$sql2 = "SELECT USUARIO FROM usuarios WHERE id_usuario = '$aidi'";
+
+								//EJECUTO LA SENTENCIA
+								$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
+		
+								//LO TRANSFORMO A UN ARRAY
+								//$array2 = mysqli_fetch_assoc($resultado2);
+
+								//foreach ($array2 as $value2) {
+								while($fila2 = mysqli_fetch_assoc($resultado2)){
+											 													
+									echo $fila2['USUARIO'];
+							?>
+							</td>
+							<?php
+								echo '<td><a href="perfil2.php?usuario='.$fila2['USUARIO'].'">Ver Perfil</a></td>';
+								}
+							?> 
+							</tr>
+							<?php
 							}
-						?> 
-						</tr>
-						<?php
-						}
-						?>
+							?>
 
-							
+								
 
-							</table>
+								</table>
 						</div>
 					</div>
 
