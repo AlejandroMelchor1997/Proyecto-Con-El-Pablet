@@ -120,9 +120,9 @@
 							<td> 
 							<?php 
 								//echo $fila['ID_USUARIO'];
-
+								$current_user = $_SESSION['usuario'];
 								$aidi = $fila['ID_USUARIO'];
-								$sql2 = "SELECT USUARIO FROM usuarios WHERE id_usuario = '$aidi'";
+								$sql2 = "SELECT USUARIO FROM usuarios WHERE id_usuario = '$aidi' AND usuario <> '$current_user'";
 
 								//EJECUTO LA SENTENCIA
 								$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
