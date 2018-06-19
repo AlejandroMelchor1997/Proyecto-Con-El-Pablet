@@ -89,9 +89,9 @@
 						</div>
 						<div class="info_texto">
 
-							<table align="center" class="tabla_php" border="1">
+							<table align="center" class="tabla_php" border="1" >
 								<tr>
-									<td><a href="enviados.php">ENVIADOS</td><td><a href="recibidos.php">RECIBIDOS</td>
+									<td><a href="enviados.php"  style="color: white;">ENVIADOS</td><td><a href="recibidos.php"  style="color: white;">RECIBIDOS</td>
 								</tr>
 							</table>
 						</div>

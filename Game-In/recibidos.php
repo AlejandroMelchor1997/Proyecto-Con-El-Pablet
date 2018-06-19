@@ -132,7 +132,8 @@ session_start();
 													$usuario = $array3['USUARIO'];
 													$mensaje = $array2['MENSAJE'];
 													echo "<tr><td>Mensaje de: <td>";
-													echo '<td>'.$usuario.'</td><td>'.$mensaje.'</td></tr>';	
+													echo '<td><a href="perfil2.php?usuario='.$usuario.'">'.$usuario.'</a></td><td>'.$mensaje.'</td></tr>';
+
 												}	
 											}
 											

@@ -25,7 +25,10 @@
 
 		header("Location:form_login.php");
 
-	} 
+	} else{
+		//SI LA SESION EXISTE SACA SU VALOR PARA MOSTRARLO
+		$nombre_sesion = $_SESSION['usuario'];
+	}
 	?>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -63,7 +66,7 @@
 			<!-- DIV QUE OCUPARA LA MITAD DE LA PANTALLA -->
 			<div class="info_texto col-6 row" style="margin-left: 25%">
 				<div class="col-12">
-					<h2 align="center"></h2><br/>
+					<h2 align="center"><?php echo $nombre_sesion ?></h2><br/>
 
 					<?php
 
@@ -128,8 +131,11 @@
 					?>
 
 				
-				
-					<?php echo '<a href="mensaje_correo.php?usuario='.$usuario.'"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Enviar Mensaje</button><a>' ?>
+					<form action="mensaje_correo.php" method="POST">
+						<input type="submit" value="Enviar Mensaje" style="background-color: grey; color: white;" class="btn btn-dark">	
+						<input type="hidden" name="usuario" value="<?php echo $usuario;?>"/>					
+					</form>
+					<!--<?php //echo '<a href="mensaje_correo.php?usuario='.$usuario.'"><button class="btn btn-outline-success my-2 my-sm-0" type="button" style="background-color: grey; color: white;">Enviar Mensaje</button><a>' ?> -->
 					</div>
 				</div>
 			</div>

@@ -72,7 +72,9 @@
     </div>
   </nav>
 </header>
-	
+	<?php
+	$usuario = $_REQUEST['usuario'];
+	?>	
 	<!-- CREAMOS EL SECCTION PARA AGRUPAR TODO LO QUE NO ES BARRA DE NAVEGACION -->
 	<section>
 		<!-- CREAMOS EL CONTAINER FLUID PARA QUE OCUPE TODO EL ANCHO DE LA PAGINA -->
@@ -86,14 +88,14 @@
 					</div>
 					<div class="col-lg-8 col-md-12">
 						<div class="info_texto" >
-							<h3>MENSAJES</h3>
+							<h3>MENSAJE PARA <?php echo $usuario; ?></h3>
 						</div>
 						<div class="info_texto">
 
 							<table align="center" class="tabla_php">
 						<?php
 
-							$usuario = $_REQUEST['usuario'];
+							
 
 							//conexion (segura por encima de la raiz del servidor)
 							include('c:\xampp\seguridad\mysql.inc.php');
@@ -129,7 +131,7 @@
 							<table align="center"> 
 								<tr>
 									<td>
-										<input type="textarea" name="mensaje" value="mensaje">
+										<textarea placeholder="Escriba mensaje" name="mensaje" cols="80" rows="5"></textarea> 
 										<input type="hidden" name="emi" value="<?php echo $id_emisor;?>"/>
 										<input type="hidden" name="rec" value="<?php echo $id_receptor;?>"/>
 									</td>
