@@ -89,7 +89,7 @@
 						</div>
 						<div class="info_texto">
 
-							<table align="center" class="tabla_php">
+							<table align="center" class="tabla_php" border="1">
 								<tr>
 									<td><a href="enviados.php">ENVIADOS</td><td><a href="recibidos.php">RECIBIDOS</td>
 								</tr>

@@ -91,9 +91,6 @@ session_start();
 
 							<table align="center" class="tabla_php"  style="border-style: solid;border-color: black;">
 						<?php
-							//RECOGEMOS EL DATO
-							$id_emisor = $_REQUEST['emi'];
-
 							//conexion (segura por encima de la raiz del servidor)
 							include('c:\xampp\seguridad\mysql.inc.php');
 
@@ -120,39 +117,30 @@ session_start();
 							//SACAMOS TODO CON UN WHILE
 							//COMENTO ESTO PARA QUE SOLO ME MUESTRE LOS MENSAJES UNA VEZ
 							//while ($array2 = mysqli_fetch_assoc($resultado2)) {
+							
 						?>
 
-							
-							<form action="enviar_respuesta.php" method="POST">
 								<table align="center" border="1">
-
-									<tr>
-										<td>Mensaje:</td>
-									</tr>
 										<?php
-											$sql3 = "SELECT MENSAJE FROM MENSAJES WHERE ID_USUARIO_EMISOR = '$id_emisor'";
-											//EJECUTO LA SENTENCIA
-											$resultado3 = mysqli_query($conexion, $sql3) or die (mysqli_error($conexion));
-											while($array3 = mysqli_fetch_assoc($resultado3)){
-												$mensaje = $array3['MENSAJE'];
-												echo "<tr>";
-												echo '<td>'.$mensaje.'</td>';	
+											while($array2 = mysqli_fetch_assoc($resultado2)){
+												$id_emisor = $array2['ID_USUARIO_EMISOR'];
+
+												$sql3 = "SELECT USUARIO FROM USUARIOS WHERE ID_USUARIO = '$id_emisor'";
+												//EJECUTO LA SENTENCIA
+												$resultado3 = mysqli_query($conexion, $sql3) or die (mysqli_error($conexion));
+												while($array3 = mysqli_fetch_assoc($resultado3)){
+													$usuario = $array3['USUARIO'];
+													$mensaje = $array2['MENSAJE'];
+													echo "<tr><td>Mensaje de: <td>";
+													echo '<td>'.$usuario.'</td><td>'.$mensaje.'</td></tr>';	
+												}	
 											}
 											
+											
 										 ?>
-									<tr>
-										<td>
-											<input type="textarea" name="respuesta" value="respuesta">
-											<input type="hidden" name="rec" value="<?php echo $id_emisor;?>"/>
-											<input type="hidden" name="emi" value="<?php echo $id_sesion;?>"/>
-
-										</td>
-									</tr>
-									<tr>
-										<td><input type="submit" value="enviar" name="enviar"></td>
-									</tr>
+									
 								</table>
-							</form>
+							
 
 							<?php
 							//}
