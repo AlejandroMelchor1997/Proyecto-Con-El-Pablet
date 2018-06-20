@@ -112,7 +112,7 @@ session_start();
 							
 
 							//SACO LA INFO DE LOS MENSAJES
-							$sql2 = "SELECT * FROM MENSAJES WHERE ID_USUARIO_EMISOR = '$id_sesion'";
+							$sql2 = "SELECT * FROM MENSAJES WHERE ID_USUARIO_EMISOR = '$id_sesion' ORDER BY FECHA DESC";
 							
 							//EJECUTO LA SENTENCIA
 							$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
@@ -134,8 +134,12 @@ session_start();
 													$usuario = $array3['USUARIO'];
 													$mensaje = $array2['MENSAJE'];
 													$fecha = $array2['FECHA'];
+													$id_mensaje = $array2['ID_MENSAJE'];
+													echo $id_mensaje;
+													echo $id_sesion;
+
 													echo "<tr>";
-													echo '<td>'.$usuario.'</td><td>'.$mensaje.'</td><td>'.$fecha.'</td></tr>';	
+													echo '<td>'.$usuario.'</td><td>'.$mensaje.'</td><td>'.$fecha.'</td><td><a href="borrar_mensaje_enviado.php?id_mensaje='.$id_mensaje.'&id_usuario='.$id_sesion.'"><img src="img/trashcan.svg"></a></td></tr>';	
 												}	
 											}
 											
@@ -143,6 +147,7 @@ session_start();
 										 ?>
 									
 								</table>
+								<a href="mensajes.php" style="color: white;"><img src="img/arrow-left.svg">Volver</a>
 							
 
 							<?php

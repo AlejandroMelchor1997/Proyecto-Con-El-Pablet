@@ -89,10 +89,9 @@ session_start();
 						</div>
 						<div class="info_texto">
 
-							<table align="center" class="tabla_php" border="1" style="border-style: solid;border-color: black;">
-								<tr>
-									<td>Receptor</td><td>Mensaje</td><td>Fecha</td>
-								</tr>
+							
+
+							
 						<?php
 							//conexion (segura por encima de la raiz del servidor)
 							include('c:\xampp\seguridad\mysql.inc.php');
@@ -112,7 +111,7 @@ session_start();
 							
 
 							//SACO LA INFO DE LOS MENSAJES
-							$sql2 = "SELECT * FROM MENSAJES WHERE ID_USUARIO_RECEPTOR = '$id_sesion'";
+							$sql2 = "SELECT * FROM MENSAJES WHERE ID_USUARIO_RECEPTOR = '$id_sesion' ORDER BY FECHA DESC";
 							
 							//EJECUTO LA SENTENCIA
 							$resultado2 = mysqli_query($conexion, $sql2) or die (mysqli_error($conexion));
@@ -122,7 +121,11 @@ session_start();
 							//while ($array2 = mysqli_fetch_assoc($resultado2)) {
 							
 						?>
-
+						
+							<table align="center" class="tabla_php" border="1" style="border-style: solid;border-color: black;">
+								<tr>
+									<td>Receptor</td><td>Mensaje</td><td>Fecha</td>
+								</tr>
 								
 										<?php
 											while($array2 = mysqli_fetch_assoc($resultado2)){
@@ -135,24 +138,36 @@ session_start();
 													$usuario = $array3['USUARIO'];
 													$mensaje = $array2['MENSAJE'];
 													$fecha = $array2['FECHA'];
-													echo "<tr>";
-													echo '<td><a href="perfil2.php?usuario='.$usuario.'">'.$usuario.'</a></td><td>'.$mensaje.'</td><td>'.$fecha.'</td></tr>';
+													
+													$boolean = $array2['LEIDO'];
+													if ($boolean == "no") {
+														echo '<tr style="background-color: lightblue"><td><a href="perfil2.php?usuario='.$usuario.'"">'.$usuario.'</a></td><td>'.$mensaje.'</td><td>'.$fecha.'</td><td><img src="img/x.svg"></td><td><a href="borrar_mensaje.php?id_mensaje='.$id_mensaje.'&id_usuario='.$id_sesion.'"><img src="img/trashcan.svg"></a></td>';
+														echo "</tr>";
+														
+														
+
+														$id_mensaje = $array2['ID_MENSAJE'];
+														$sqlU = "UPDATE mensajes SET LEIDO='si' WHERE ID_MENSAJE='$id_mensaje'";
+														$resultadoU = mysqli_query($conexion, $sqlU) or die (mysqli_error($conexion));
+													} else {
+
+														//echo '<input type="hidden" name="id_mensaje" value="'.$id_mensaje.'">';
+														//echo '<input type="hidden" name="id_usuario" value="'.$id_sesion.'">';
+														$id_mensaje = $array2['ID_MENSAJE'];
+
+														echo '<tr><td><a href="perfil2.php?usuario='.$usuario.'" style="color: white;">'.$usuario.'</a></td><td>'.$mensaje.'</td><td>'.$fecha.'</td><td><img src="img/check.svg"></td><td><a href="borrar_mensaje_recibido.php?id_mensaje='.$id_mensaje.'&id_usuario='.$id_sesion.'"><img src="img/trashcan.svg"></a></td></tr>';
+																												
+													}
+													echo "</tr>";
 
 												}	
 											}
 											
 											
 										 ?>
-									
-								</table>
-							
-
-							<?php
-							//}
-
-						?>
-
-						
+									</table>
+										
+									<a href="mensajes.php" style="color: white;"><img src="img/arrow-left.svg">Volver</a>
 
 
 						</div>
