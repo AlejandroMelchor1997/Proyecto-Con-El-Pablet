@@ -1,0 +1,143 @@
+/*ESTILOS DE LA BARRA DE NAVEGACION */
+
+.logo{
+	margin-right: 35px;
+}
+
+
+.navbar-custom {
+	background-color:#ffbb33;
+  	border-radius:0;
+  	height: auto;
+}
+
+.dropdown-toggle{
+	color: white !important;
+
+}
+
+.nav-link{
+	color:white !important;	
+}
+.dropdown-toggle:active, .open .dropdown-toggle {
+        background-color: white !important; 
+        color:white !important;
+}
+
+.dropdown-toggle:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.1); 
+
+}
+
+.form-inline{
+	position: relative;
+	float: right;
+}
+
+
+
+/*AQUI LA PARTE DEL BODY*/
+body {
+	background-image: url("../img/fondo_negro.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/*ESTILO TITULOS*/
+.info_web {
+	margin-left: 10%;
+	width: 80%;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	margin-top: 15px;
+	padding: 10px;
+	color: white;
+}
+
+/*ESTILO FOTOS*/
+.info_foto {
+	
+	margin-top: 15px;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+
+/*ESTILO HOVER FOTOS PORTADA*/
+.img_portada:hover{
+	transform: scale(1.02); 
+}
+
+/*ESTILO CUADROS DE TEXTO*/
+.info_texto {
+	
+	margin-top: 15px;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+
+/*ESTILO ENLACES GRANDES*/
+a.enlaces{
+	color: black !important;
+	font-size: 25px;
+}
+
+a.enlaces:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.2); 	 
+ 	
+}
+
+/*ESTILO ENLACES PEQUEÑOS*/
+a.enlaces2{
+	color: black !important;
+	font-size: 15px;
+}
+
+a.enlaces2:hover{
+	color: #bf360c !important;
+ 	 transform: scale(1.2); 	 
+ 	
+}
+
+hr {
+  border: 1px solid black;
+}
+
+/*ESTILOS DEL FORMULARIOS */
+.tabla_php {
+	margin-top: 10%;
+	color: white;
+	border-radius: 10px;
+	background-color: rgba(40, 167, 69, 0.8)  !important;
+}
+
+/*ESTILOS DEL FOOTER */
+.footer1{
+	margin-top: 40px;
+	text-align: center;
+	background-color: rgba(40, 167, 69, 0.7)  !important;
+	border-radius: 10px;
+	
+	color: white;
+}
+
+.copy{
+	color: rgba(40, 167, 69, 0.7);
+	text-align: center;
+}
+
+.enlaces_footer{
+	color:#0000FF;
+}
+
+
+
