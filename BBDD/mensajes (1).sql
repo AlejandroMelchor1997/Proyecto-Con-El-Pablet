@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2018 a las 19:28:54
+-- Tiempo de generación: 20-06-2018 a las 23:02:09
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -32,23 +32,22 @@ CREATE TABLE `mensajes` (
   `ID_MENSAJE` int(10) NOT NULL,
   `ID_USUARIO_EMISOR` int(20) NOT NULL,
   `ID_USUARIO_RECEPTOR` int(20) NOT NULL,
-  `MENSAJE` varchar(300) NOT NULL
+  `MENSAJE` varchar(300) NOT NULL,
+  `FECHA` datetime NOT NULL,
+  `LEIDO` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `mensajes`
 --
 
-INSERT INTO `mensajes` (`ID_MENSAJE`, `ID_USUARIO_EMISOR`, `ID_USUARIO_RECEPTOR`, `MENSAJE`) VALUES
-(1, 1, 7, 'Holis wapi'),
-(2, 3, 7, 'helloooo'),
-(3, 1, 7, 'que tal, juegas?'),
-(4, 7, 1, 'contigo no, puto bicho'),
-(5, 7, 3, 'holiwiski'),
-(6, 7, 6, 'Jugamos loko?'),
-(7, 8, 5, 'hola, jugamos??'),
-(8, 5, 5, 'Hola manolo, te apetece jugar conmigo?Â¿'),
-(9, 5, 7, 'Hola pedrito, quieres jugar conmigo?');
+INSERT INTO `mensajes` (`ID_MENSAJE`, `ID_USUARIO_EMISOR`, `ID_USUARIO_RECEPTOR`, `MENSAJE`, `FECHA`, `LEIDO`) VALUES
+(1, 3, 0, 'Hola mozuelo', '2018-06-20 17:55:32', 'si'),
+(2, 2, 3, 'Funciona?', '2018-06-20 18:31:46', 'si'),
+(3, 4, 2, 'Hola, me gustaria ser tu amiguito y jugar juntos', '2018-06-20 22:47:43', 'si'),
+(4, 0, 3, 'Hola, me gustaria jkugar contihgo, mi teclado no es mui vueno', '2018-06-20 22:48:09', 'si'),
+(5, 2, 4, 'Hola mengan, que tal?', '2018-06-20 22:49:07', 'si'),
+(6, 3, 0, 'asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd ', '2018-06-20 22:49:37', 'si');
 
 --
 -- Índices para tablas volcadas
