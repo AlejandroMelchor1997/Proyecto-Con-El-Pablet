@@ -134,6 +134,7 @@
 										<textarea placeholder="Escriba mensaje" name="mensaje" cols="80" rows="5"></textarea> 
 										<input type="hidden" name="emi" value="<?php echo $id_emisor;?>"/>
 										<input type="hidden" name="rec" value="<?php echo $id_receptor;?>"/>
+										<?php echo $id_receptor; echo $id_emisor;?>
 									</td>
 								</tr>
 								<tr>

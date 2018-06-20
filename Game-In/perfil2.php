@@ -28,6 +28,8 @@
 	} else{
 		//SI LA SESION EXISTE SACA SU VALOR PARA MOSTRARLO
 		$nombre_sesion = $_SESSION['usuario'];
+		
+		$usuario = $_REQUEST['usuario'];
 	}
 	?>
 	<header>
@@ -66,11 +68,10 @@
 			<!-- DIV QUE OCUPARA LA MITAD DE LA PANTALLA -->
 			<div class="info_texto col-6 row" style="margin-left: 25%">
 				<div class="col-12">
-					<h2 align="center"><?php echo $nombre_sesion ?></h2><br/>
+					<h2 align="center"><?php echo $usuario ?></h2><br/>
 
 					<?php
 
-					$usuario = $_REQUEST['usuario'];
 
 					//conexion (segura por encima de la raiz del servidor)
 					include('c:\xampp\seguridad\mysql.inc.php');

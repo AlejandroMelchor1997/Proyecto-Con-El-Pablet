@@ -23,7 +23,9 @@
 	//HAY QUE DEPURAR PARA QUE NO REPITA NUMEROS Y NO CASQUE
 	$id_mensaje = $filas + 1;
 
-	$sql5 = "INSERT INTO MENSAJES VALUES ('$id_mensaje', '$emi', '$rec', '$mensaje')";
+	$fecha = date("Y-m-d G:i:s");
+
+	$sql5 = "INSERT INTO MENSAJES VALUES ('$id_mensaje', '$emi', '$rec', '$mensaje', '$fecha')";
 	//EJECUTO LA SENTENCIA
 	$resultado4 = mysqli_query($conexion, $sql5);
 

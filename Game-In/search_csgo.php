@@ -92,7 +92,7 @@
 							<h3>Listado de jugadores de CS-GO</h3>
 						</div>
 						<div class="info_texto">
-
+						<form action="perfil2.php" method="POST">
 							<table align="center" class="tabla_php">
 						<?php
 
@@ -137,8 +137,11 @@
 									echo $fila2['USUARIO'];
 							?>
 							</td>
+							<!--<td><a href="perfil2.php">Ver Perfil</a></td>-->
+							<input type="hidden" name="usuario" value="<?php echo $fila2['USUARIO'];?>"/>
+							<td><input type="submit" value="Ver Perfil" style="background-color: grey; color: white;" class="btn btn-dark"></td>
 							<?php
-								echo '<td><a href="perfil2.php?usuario='.$fila2['USUARIO'].'">Ver Perfil</a></td>';
+								
 								}
 							?> 
 							</tr>
@@ -149,6 +152,7 @@
 								
 
 								</table>
+							</form>
 						</div>
 					</div>
 

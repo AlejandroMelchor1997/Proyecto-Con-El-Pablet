@@ -89,7 +89,10 @@ session_start();
 						</div>
 						<div class="info_texto">
 
-							<table align="center" class="tabla_php"  style="border-style: solid;border-color: black;">
+							<table align="center" class="tabla_php" border="1" style="border-style: solid;border-color: black;">
+								<tr>
+									<td>Receptor</td><td>Mensaje</td><td>Fecha</td>
+								</tr>
 						<?php
 							//conexion (segura por encima de la raiz del servidor)
 							include('c:\xampp\seguridad\mysql.inc.php');
@@ -120,7 +123,7 @@ session_start();
 							
 						?>
 
-								<table align="center" border="1">
+								
 										<?php
 											while($array2 = mysqli_fetch_assoc($resultado2)){
 												$id_emisor = $array2['ID_USUARIO_EMISOR'];
@@ -131,8 +134,9 @@ session_start();
 												while($array3 = mysqli_fetch_assoc($resultado3)){
 													$usuario = $array3['USUARIO'];
 													$mensaje = $array2['MENSAJE'];
-													echo "<tr><td>Mensaje de: <td>";
-													echo '<td><a href="perfil2.php?usuario='.$usuario.'">'.$usuario.'</a></td><td>'.$mensaje.'</td></tr>';
+													$fecha = $array2['FECHA'];
+													echo "<tr>";
+													echo '<td><a href="perfil2.php?usuario='.$usuario.'">'.$usuario.'</a></td><td>'.$mensaje.'</td><td>'.$fecha.'</td></tr>';
 
 												}	
 											}
